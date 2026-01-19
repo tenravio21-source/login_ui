@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 import '../models/onboarding_page_model.dart';
 
@@ -26,6 +27,8 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
 
   @override
   Widget build(BuildContext context) {
+    bool isLandscape =
+        MediaQuery.of(context).orientation == Orientation.landscape;
     return Scaffold(
       body: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
@@ -49,10 +52,10 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
                     return Column(
                       children: [
                         Expanded(
-                          flex: 3,
+                          flex: isLandscape ? 1 : 4,
                           child: Padding(
-                            padding: const EdgeInsets.all(32.0),
-                            child: Image.asset(item.imageUrl),
+                            padding: const EdgeInsets.all(12.0),
+                            child: Lottie.asset(item.imageUrl),
                           ),
                         ),
                         Expanded(
