@@ -122,7 +122,9 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
               SizedBox(
                 height: 100,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: isLandscape
+                      ? MainAxisAlignment.spaceEvenly
+                      : MainAxisAlignment.spaceBetween,
                   children: [
                     TextButton(
                       style: TextButton.styleFrom(
