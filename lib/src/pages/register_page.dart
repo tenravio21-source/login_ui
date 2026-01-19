@@ -1,9 +1,9 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class RegisterPage extends StatelessWidget {
   final void Function()? onTap;
-  const LoginPage({super.key, this.onTap});
+  const RegisterPage({super.key, this.onTap});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +59,7 @@ class LoginPage extends StatelessWidget {
                         margin: const EdgeInsets.only(top: 10.0),
                         child: Center(
                           child: Text(
-                            'Login',
+                            'Register',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 40.0,
@@ -109,6 +109,23 @@ class LoginPage extends StatelessWidget {
                             child: TextField(
                               decoration: InputDecoration(
                                 border: InputBorder.none,
+                                hintText: 'Name',
+                                hintStyle: TextStyle(color: Colors.grey[700]),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(8.0),
+                            decoration: BoxDecoration(
+                              border: Border(
+                                bottom: BorderSide(
+                                  color: Color.fromRGBO(143, 148, 251, 0.2),
+                                ),
+                              ),
+                            ),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
                                 hintText: 'Email or Phone Number',
                                 hintStyle: TextStyle(color: Colors.grey[700]),
                               ),
@@ -146,23 +163,12 @@ class LoginPage extends StatelessWidget {
                       ),
                       child: Center(
                         child: Text(
-                          'Login',
+                          'Register',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 30.0),
-                  FadeInUp(
-                    duration: Duration(milliseconds: 1900),
-                    child: Text(
-                      'Forgot Password?',
-                      style: TextStyle(
-                        color: Color.fromRGBO(143, 148, 251, 1),
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
@@ -175,7 +181,7 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Not a member?',
+                    'Already a member?',
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.primary,
                     ),
@@ -184,7 +190,7 @@ class LoginPage extends StatelessWidget {
                   GestureDetector(
                     onTap: onTap, // Uses the toggle function
                     child: Text(
-                      'Register now',
+                      'Login now',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).colorScheme.primary,

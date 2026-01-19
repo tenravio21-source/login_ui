@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:login_app_design/src/pages/login_page.dart';
+
+import 'pages/slash_page/on_boarding_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -9,7 +10,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: const LoginPage(),
+      home: OnboardingPage(),
     );
   }
 }
