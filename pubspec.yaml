@@ -10,6 +10,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   animate_do: ^4.2.0
   lottie: ^3.3.2
+  salomon_bottom_bar: ^3.3.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
