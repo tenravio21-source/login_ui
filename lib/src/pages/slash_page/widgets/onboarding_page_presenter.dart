@@ -22,7 +22,6 @@ class OnboardingPagePresenter extends StatefulWidget {
 class _OnboardingPageState extends State<OnboardingPagePresenter> {
   // Store the currently visible page
   int _currentPage = 0;
-  // Define a controller for the pageview
   final PageController _pageController = PageController(initialPage: 0);
 
   @override
@@ -37,12 +36,10 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
           child: Column(
             children: [
               Expanded(
-                // Pageview to render each page
                 child: PageView.builder(
                   controller: _pageController,
                   itemCount: widget.pages.length,
                   onPageChanged: (idx) {
-                    // Change current page when pageview changes
                     setState(() {
                       _currentPage = idx;
                     });
